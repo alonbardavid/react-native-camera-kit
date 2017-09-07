@@ -23,6 +23,10 @@ public class GalleryView extends RecyclerView {
                 Log.e("WIX", "IOOBE in RecyclerView");
             }
         }
+        @Override
+        public int getExtraLayoutSpace (RecyclerView.State state) {
+            return 5000;
+        }
     }
 
     private int itemSpacing;
@@ -32,6 +36,7 @@ public class GalleryView extends RecyclerView {
         super(context);
         setHasFixedSize(true);
         getRecycledViewPool().setMaxRecycledViews(0, 20);
+        setItemViewCacheSize(1000);
     }
 
     private void updateDecorator() {

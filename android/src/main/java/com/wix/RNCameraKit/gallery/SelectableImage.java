@@ -52,7 +52,7 @@ public class SelectableImage extends FrameLayout {
         this.reactContext = reactContext;
 
         setPadding(1, 1, 1, 1);
-        setBackgroundColor(0xedeff0);
+        setBackgroundColor(0x000000);
         imageView = new ImageView(reactContext);
         addView(imageView, MATCH_PARENT, MATCH_PARENT);
 
@@ -114,7 +114,7 @@ public class SelectableImage extends FrameLayout {
         if (this.id != id || forceBind) {
             this.id = id;
             imageView.setImageBitmap(null);
-            imageView.setBackgroundColor(Color.LTGRAY);
+            imageView.setBackgroundColor(Color.BLACK);
             if (currentLoader != null) {
                 executor.remove(currentLoader);
             }
